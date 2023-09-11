@@ -27,7 +27,7 @@ async function saveDataToDatabase(data) {
 
 // Level 1: Get City Weather Data by Name
 
-const data = JSON.parse(fs.readFileSync(`${__dirname}../controllers/data.json`));
+const data = JSON.parse(fs.readFileSync(`${__dirname}../data/data.json`));
 
 async function getWeatherDataByName(cityName) {
 	let name = cityName.toLowerCase();
@@ -36,17 +36,6 @@ async function getWeatherDataByName(cityName) {
 	return fetchedData;
 }
 
-/*
-  Instructions for students:
-  Implement the function getForecastDataByName(cityName) that retrieves the 7-day weather forecast data for a city by its name.
-
-  Tips:
-    - Use the getDataFromDatabase() function to retrieve the data from the database.
-    - Access the array of cities and their forecast data from the returned result.
-    - Find the city object with the matching name and extract its forecast data.
-    - Return the appropriate JSON response based on the result.
-
-*/
 
 // Level 2: Get 7 Days Weather Forecast Data by Name
 async function getForecastDataByName(cityName) {
