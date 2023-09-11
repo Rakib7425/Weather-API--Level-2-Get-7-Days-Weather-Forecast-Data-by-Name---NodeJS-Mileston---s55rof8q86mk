@@ -27,7 +27,7 @@ async function saveDataToDatabase(data) {
 
 // Level 1: Get City Weather Data by Name
 
-const data = JSON.parse(fs.readFileSync(`${__dirname}../data/data.json`));
+const data = JSON.parse(fs.readFileSync(`${__dirname}/../data/data.json`));
 
 async function getWeatherDataByName(cityName) {
 	let name = cityName.toLowerCase();
